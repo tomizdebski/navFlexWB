@@ -8,7 +8,7 @@ html {
 body {
     font-family: sans-serif;
     margin: 0;
-    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%)
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 }
 a {
     color:white;
@@ -31,6 +31,8 @@ a:hover {
 }
 img {
     width:100%;
+    
+
 }
 .wrapper {
     max-width: 1000px;
@@ -52,6 +54,19 @@ img {
 .flex-nav .social {
     flex:1;
 }
+.signup input{
+    display:inline-flex;
+    width:33%;
+    padding: 10px;
+    text-align: center;
+    
+}
+footer {
+    text-align: center;
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%)
+}
+
+
 @media all and (max-width: 1000px) {
     .flex-nav ul {
         flex-wrap: wrap;
@@ -67,5 +82,37 @@ img {
 @media all and (max-width: 500px) {
     .flex-nav li {
         flex:1 1 100%;
+        
     }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+     
+    .wrapper > * {
+        order:999;
+    }
+    .flex-nav {
+        order:1;
+    }
+    .toggleNav {
+        display: block;
+    }
+    .flex-nav ul{
+        display: none;
+    }
+    .flex-nav ul.open {
+        display:flex;
+    }
+    .top {
+        order: 2;
+    }
+    .details {
+        order: 3;
+    }
+    .signup {
+        order: 4;
+       
+    }
+    
 }
