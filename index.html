@@ -11,7 +11,12 @@
 </head>
 <body>
     <div class="wrapper">
+        <header class="top">
+            <h1><a href="#">What the Flexbox?!</a></h1>
+        </header>
+
         <nav class="flex-nav">
+            <a href="#" class="toggleNav">Menu</a>
             <ul>
                 <li><a href="#">item 1</a></li>
                 <li><a href="#">item 2</a></li>
@@ -25,7 +30,29 @@
                 <li class="social"><a href="http://instagram.com"><i class="bi bi-instagram"></i></a></li>
             </ul>
         </nav>
+        <section class="hero">
+            <img src="https://picsum.photos/seed/picsum/1000/600" alt="">
+        </section>
+        <section class="details">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Consectetur quaerat, dolorum id fugit in repellat, 
+                sit voluptas quidem incidunt ratione magnam aliquid dolorem minus blanditiis, ea dolor.
+                 Magnam, sunt totam.
+            </p>
+        </section>
+        <footer>
+            <p>&copy;Itom</p>
+        </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.toggleNav').on('click', function() {
+                $('.flex-nav ul').toggleClass('open');
+            });
+        });
+    </script>
+
     
 </body>
 </html>
